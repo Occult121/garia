@@ -1,0 +1,209 @@
+<html> 
+<head> 
+<style> 
+#holder { display :flex; 
+flex-direction :row; 
+background-color : black; 
+flex-wrap : wrap; 
+justify-content : space-around , space-between; } 
+#holder >div { background-color :white; 
+margin :9px; 
+border :9px;} </style>
+</head> 
+
+<body> 
+<h1><marquee behavior ="slide"> dwh , data mining, DBMS  </marquee></h1> 
+<br><br> 
+<h2> 
+<nav> 
+<a href ="C:\Users\Admin\Downloads\dfu.html#spatial"> SPATIAL DATABASES </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#dwh"> DATA WAREHOUSE </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#attributes"> ATTRIBUTES </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#decision"> DECISION TREES </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#olap"> OLAP </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#others"> OTHERS </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#existence"> EXISTENCE DEPENDENCY </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#functional"> FUNCTIONAL DEPENDENCIES </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#normalize"> NORMALIZATION </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#recovery"> DATABASE RECOVERY </a>| 
+<a href ="C:\Users\Admin\Downloads\dfu.html#acid"> TRANSACTIONS </a>
+</nav> 
+</h2><br><br> 
+
+
+<div id ="holder"> 
+<div> 
+<section id ="spatial">
+Spatial databases and text databases ---- spatial databases are derived from geospatial consortium and used to draw 3d geometric shapes,<br> 
+ can add onto or modify existing 3d geometric shapes, have observer reference and endowed with 3d spatial indexes as HH Code and Z order <br> 
+Text databases are available on word documents and text files and respond to Ad hoc queries <br> 
+<a target="_blank" href="https://www.tutorialspoint.com/article/spatial-databases"><img src="https://www.tutorialspoint.com/assets/questions/images/97029-1532497066.png" alt ="g" width ="350" height ="350"></a> 
+<br> 
+</section> 
+</div> 
+
+
+<div> 
+<section id ="dwh"> 
+A dwh ---- just query + analysis , the dwh is essentially subject oriented – nonvolatile –integrated – time variant – historical data .<br> 
+ advocates BI , there are some differences between a dwh and OLTP database : <br><ol type ="a"><li> 
+	Dwh --- query + analysis oltp --- transactions </li><li>
+	Dwh --- de normalized tables oltp --- normalized tables </li><li>
+	Dwh ---- historical data oltp ---- transient data </li><li>
+	Dwh --- BI oltp--- transactions index </li><li>
+	Dwh --- slice + dice data unlike oltp</li><li>
+	Dwh --- roll up , drill down unlike oltp</li><li>  
+	Dwh ---- real time , federated , distributed oltp –data marts etc </li><li>
+	Dwh e.gs --- Erwin , cognos oltp e.gs – data marts etc </li><li>
+	OLAP based on dwh performs faster data indexing unlike oltp </li></ol><br>
+A dwh has a 3 tier layered architecture that has the following layers : <br><ol type="A"> 
+<li> 
+	Bottom layer has centralized RDBMS servers and MD DBMS that have parallel processing and improved scalability </li><li> 
+	Middle layer has OLAP servers </li><li>
+	Top layer has user programs that respond to OLAP servers</li></ol> 
+<br><br> 
+ 
+
+Data discretization deals with a continuous range of attributes in splitting or merging or concept hierarchy that generates a hierarchy of attributes ,<br> 
+ used in dimensional data reduction , data granularity levels <br> 
+</section> 
+</div> 
+
+
+<div> 
+<section id ="attributes"> 
+Types of attributes : <br> 
+1)	Nominal attributes – data order is not imp though imp is difference in data intervals <br> 
+2)	Ordinal attributes ---- imp is data order though not imp is difference in data intervals <br> 
+3)	Interval attributes ---- imp is data order + difference in data intervals <br> 
+4)	Ratio attributes --- imp is data order , difference in data intervals and a 0.0 where 0.0 = no data <br><br> 
+<a target ="_blank" href="https://studyglance.in/dm/display.php?tno=2&topic=Attribute-Types"><img src="https://studyglance.in/dm/images/Attribute-Types-in-data-mining.png" alt ="f" width ="350" height ="350"></a> 
+
+<br></section></div>
+
+
+<div> 
+<section id="decision"> 
+Decision tree based on ID3 Algorithm that finds data homogeneous and entropy finds to what extent data is homogeneous .<br> 
+ we can find entropy from a frequency table . information gain is rel. entropy reduction. <br> 
+We can construct a decision tree by computing info gain for each variable , summing info gains till a max that renders entropy a min <br><br> 
+<a target="_blank" href="https://www.geeksforgeeks.org/data-analysis/scalability-and-decision-tree-induction-in-data-mining/"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Decision_Tree-2.png" alt ="g" width ="350" height ="350"></a> 
+<br></section></div> 
+
+
+<div> 
+<section id="olap"> 
+<figure> 
+<img src="https://www.tutorialspoint.com/dwh/images/molap_architecture.jpg" alt ="h" width ="300" height ="300"> 
+<figcaption><a target="_blank" href="https://www.tutorialspoint.com/dwh/dwh_multidimensional_olap.htm">https://www.tutorialspoint.com/dwh/dwh_multidimensional_olap.htm</a> 
+</figcaption></figure> 
+<br></section> 
+</div> 
+
+<div> 
+<section id ="others"> 
+Association rule mining --- finds freq patterns + correlated data and uses support --- support count ,<br> 
+ confidence where antecedent foll. Consequent and general measure lift , that finds rule interestingness 0 <lift <1 .<br> 
+ all strong association rules are ! = interesting and correlation does not imply causation. Apriori property => mean of sum of sequential patterns < sequential<br> 
+ subpatterns . Apriori algorithm uses join + prune  where in join , link each of k +1 items from k data to itself ,<br> 
+ in prune , iterates in k numbers of passes <br><br> 
+
+
+Classification – discrete unordered data and causes grouping of similar data . unlike eager type lazy classification  = unsupervised learning<br> 
+ where target attributes / end result not explicit . unlike eager classifiers lazy classifiers deal with complex data . <br> 
+e.gs | eager type --- decision trees, Bayesian e.gs | lazy classifiers --- clustering , CBR <br><br> 
+
+Prediction --- continuous ordered data , follows a trend in data patterns <br><br> 
+</section> 
+</div> 
+
+<div> 
+<section id="existence"> 
+
+Existence dependency --- there’s a rel schema R where for all attributes in R . the functional dependency x->  y s.t if operationally y is deleted ,<br> 
+ so is x . y is called dominant entity and x is called subordinate entity . dependency preservation occurs herein <br></section> 
+</div> 
+
+
+<div> 
+<section id ="functional"> 
+Full functional dependency -----	All non key attributes are wholly dependent on key attribute <br> 
+Partial functional dependency----- 	Some non key attributes are dependent on  the key attribute & remaining non key attributes are dependent<br> 
+ on the key attribute & on some other non key attributes<br>  
+Transitive dependency -----	If attributes in the key col of one rel correspond to the key attributes in col of another rel<br>  
+Multi valued dependency ----	In 4nf <br> 
+Join dependency -----	In 5nf<br><br></section></div> 
+
+
+
+<div> 
+<section id ="normalize"> 
+The removal of data redundancy from existing tables / rels is called as normalization<br> 
+While 1nf has redundant data that is eliminated to some extent in 2nf <br> 
+Still improvised nf is BCNF  that defines super key values . all rels in 3NF  are obviously In BCNF  but the reverse is not always true .<br> 
+ there ‘s a rel r where for all functional dependencies f on r , can find a < --r and b <-- - r s.t a --> b is a trivial dependency in f+, s.t at least one of foll.<br> 
+ Is true : a --> b is a trivial dependency in r <br> 
+a is a super key to r<br> 
+ 
+still improvised nf is 3NF  that describes candidate key values , transitive dependencies . there ‘s a rel r where for all functional dependencies f on r ,<br> 
+ can find a <--r and b < - r s.t a --> b is a trivial dependency in f+, s.t at least one of foll. Is true : a --> b  is a trivial dependency in r<br>  
+a is a super key to r<br> 
+can find a extraneous attribute in [b-a], that is contained in a candidate key for r<br>  
+4nf ---- defines multi valued dependencies <br>
+5 nf --- describes join dependencies <br></section> 
+</div> 
+
+
+<div> 
+<section id ="recovery"> 
+Where a database is to recovery from hd failure , we use check pt method of log- recovery . a check –pt is a special log record .<br> 
+ the main stages in this recovery using check pts as foll <br> 
+
+Output onto stable storage all log records residing in  main memory ---- output all modified buffer blocks onto disk ----- output onto stable storage a log record<br> 
+ check pt 
+No database modifications can occurs where a check pt In progress <br> 
+we now suppose that a hd failure occurs where a transaction executes . the log is consulted backwds till finds the transaction commit ,<br> 
+ log is still consulted backwds till finds the check pt , log is still consulted backwds till finds transaction start ---<br> 
+ now , undo and redo operations can be performed on this transaction and any that executed thereafter <br> 
+For concurrent transaction  processing , fuzzy check pointing is used <br></section> 
+</div> 
+
+<div> 
+<section id ="acid"> 
+A transaction is a unit of program execution that accesses and or possibly updates various data items. Acid properties of a transaction are : <br> 
+Atomicity --- either transaction executes in entirety or none executes at all <br> 
+Consistency --- state of database remains same both before & after transaction despite system changes<br> 
+Isolation  ---- despite concurrent execution of transactions , each transaction proceeds independently of others despite system changes<br>  
+Durability ----- any modifications made to database as a result of transaction persist even if there are system changes<br><br>  
+e.gs we have a schedule involving 2 accounts a and b, initial values in   a and b are $ 1000 and $ 2000.<br> 
+ A transaction occurs that transfers $ 50 from  a ->b  , as a result of which , final values In a and b becomes $ 950 and $ 2050. <br> 
+Clearly a consistent state as sum a +b is preserved both before and after transaction.<br> 
+ We now , suppose that a hd failure occurs after write – a committed but before write –b committed ,<br> 
+ so, now final values in   a and b becomes $ 950 and $ 2000 , clearly inconsistent state, <br> 
+ as sum a +b is no more preserved both before and after transaction. Even if system failure did not occurs<br> 
+ and transaction proceeded to completion, this inconsistent state would not have been visible except during occurrence of transaction.<br> 
+ This again reflects atomicity . isolation  is preserved. Durability is preserved through recovery mgmt. component of transactions <br> 
+</section> 
+</div> 
+</div> 
+
+<br><br> 
+<footer> 
+<h2> 
+<a target="_blank" href="mailTo:ratulxx@gmail.com">ratulxx@gmail.com</a></h2></footer><br><br><br></body></html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
